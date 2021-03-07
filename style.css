@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: 250ms all;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #252525;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  font-size: 20px;
+  overflow-x: hidden;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #79a3b1;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* navbar */
+
+.color--default {
+  background-color: #000;
+  color: white;
+}
+
+.color--change {
+  background-color: white;
+  color: black;
+}
+
+.nav--container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 24px;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav--container > .logo {
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.nav--bar {
+  padding: 16px 24px;
+}
+
+.nav--bar > .nav--list {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.nav--bar > .nav--list > li {
+  margin: 0 16px;
+}
+
+.nav--bar > .nav--list > li > a {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* container */
+.container {
+  height: 100vh;
+  color: white;
+  background-color: #64dfdf;
+
+  font-size: 40px;
+  font-weight: 900;
+  text-transform: uppercase;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* scroll animation */
+  transform: translateX(400%);
+}
+
+.container:nth-child(even) {
+  transform: translateX(-400%);
+}
+
+/* Trigger by animation */
+
+.container.show {
+  transform: translateX(0);
+}
